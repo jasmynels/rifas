@@ -1,0 +1,69 @@
+.card-winner {
+    width: 100%;
+    max-width: 620px;
+    height: 120px;
+
+    background-color: #5C5C5C;
+    position: relative;
+    z-index: 9;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.card-winner-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+
+    position: relative;
+    z-index: 39;
+    margin-left: 10px;
+}
+
+.card-winner-info > img {
+    width: 76px;
+    height: 76px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-winner-name h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.card-winner-name p {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.card-winner-prize {
+    width: 38%;
+
+    position: absolute;
+    right: 0;
+}
+
+.card-winner-prize > img {
+    width: 100%;
+    height: 120px;
+
+    object-fit: cover;
+    border-radius: 0 20px 20px 0;
+}
+
+.card-winner-overlay {
+    width: 100%;
+    height: 120px;
+    border-radius: 0 20px 20px 0;
+
+    position: absolute;
+    z-index: 29;
+    background: rgba(95, 39, 205, 0.3);
+}

@@ -1,0 +1,198 @@
+.solo-prize {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 1rem auto;
+    padding: 0 1.6rem;
+}
+
+.solo-prize-tag {
+    margin-top: 1.6rem;
+    text-align: center;
+}
+
+.solo-prize-tag span {
+    background-color: #5F27CD;
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    font-weight: bold;
+}
+
+.solo-prize-description {
+    margin-top: 1.6rem;
+}
+
+.solo-prize-description textarea{
+    height: 150px;
+    resize: vertical;
+}
+
+.solo-prize-share {
+    width: 100%;
+    margin-top: 1.2rem;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.solo-prize-date span {
+    background-color: #F1F1F1;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    color: #33C44D;
+    font-weight: bold;
+}
+
+.solo-prize-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.solo-prize-social a {
+    text-decoration: none;
+}
+
+.solo-prize-info {
+    margin-top: 1.6rem;
+}
+
+.solo-prize-search {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+
+    margin-top: 1.6rem;;
+}
+
+.solo-prize-search a {
+    width: 100%;
+    max-width: 320px;
+
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    text-align: center;
+
+    background-color: #33C44D;
+    color: #fff;
+    text-decoration: none;
+}
+
+.solo-prize-search button {
+    border: none;
+    width: 100%;
+    max-width: 320px;
+
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    text-align: center;
+
+    background-color: #5F27CD;
+    color: #fff;
+    font-size: 16px;
+}
+
+.solo-prize-numbers {
+    background-color: #F1F1F1;
+
+    margin-top: 1.6rem;
+    padding: 1.2rem;
+    border-radius: 1rem;
+}
+
+.solo-prize-numbers p {
+    text-align: center;
+}
+
+.buy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.8rem;
+
+    margin-top: 1.6rem;
+}
+
+.buy button{
+    width: 100%;
+    max-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #dbdbdb;
+    color: #000;
+
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.buy .popular {
+    background-color: #F1F1F1;
+    border: 1px solid #33C44D;
+
+    position: relative;
+    z-index: 19;
+}
+
+.popular p {
+    position: absolute;
+    z-index: 29;
+    top: -15px;
+
+    background-color: #33C44D;
+    color: #fff;
+
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+}
+
+.buy-value {
+    width: 100%;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.8rem;
+}
+
+.buy-value input {
+    text-align: center;
+}
+
+.buy-total {
+    width: 100%;
+
+    margin-top: 1.6rem;
+}
+
+.buy-total a {
+    display: block;
+    width: 100%;
+    background-color: #33C44D;
+    color: #fff;
+
+    border-radius: 14px;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+}

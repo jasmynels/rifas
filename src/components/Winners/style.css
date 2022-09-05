@@ -1,0 +1,37 @@
+.winners {
+    width: 100%;
+
+    background-color: #2d2d2d;
+    padding: 2rem;
+}
+
+.winners-info {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 1.2rem auto;
+    color: #fff;
+}
+
+.winners-cards {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+
+    margin-top: 1.4rem;
+}
+
+.winners-more {
+    margin: 2.4rem auto;
+    text-align: center;
+}
+
+.winners-more a {
+    text-decoration: none;
+    background-color: #33c44d;
+    color: #fff;
+
+    padding: 0.8rem 2rem;
+    border-radius: 0.4rem;
+}

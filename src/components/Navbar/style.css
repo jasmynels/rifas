@@ -1,0 +1,74 @@
+.nav {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+
+    background-color: #2D2D2D;
+}
+
+.nav-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 2.4rem;
+}
+
+.nav-header img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.nav-header button {
+    border: none;
+    background-color: transparent;
+}
+
+.nav-header button svg {
+    color: #fff;
+}
+
+.nav-links {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    padding: 0 1.6rem;
+}
+
+.nav-links a {
+    width: 100%;
+
+    text-decoration: none;
+    color: #fff;
+
+    border-bottom: 1px dotted #999;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nav-login {
+    width: 100%;
+    background-color: #33C44D;
+    color: #fff;
+
+    border-radius: 14px;
+    padding: 14px;
+    border: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-align: center;
+}

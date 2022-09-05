@@ -1,0 +1,102 @@
+.questions {
+    padding: 1.4rem;
+    max-width: 520px;
+    margin: 0 auto;
+}
+.questions h2 {
+    text-align: center;
+    margin: 0 0 1rem;
+}
+
+.task-collapse {
+    display: block;
+    margin: 0 0 0.6rem;
+}
+
+.task-collapse .toggle-collapse {
+    display: none;
+}
+  
+.task-collapse .toggle-collapse:checked ~ .heading {
+    background: #8253de;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+  
+.task-collapse .toggle-collapse:checked ~ .heading:before {
+    transform: translate(0, -50%) rotate(180deg);
+}
+  
+.task-collapse .toggle-collapse:checked ~ .collapse {
+    max-height: 300px;
+    overflow: initial;
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px #DDD;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+  
+.task-collapse .collapse {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: #fff;
+    transition: all 0.4s ease;
+}
+  
+.task-collapse .heading {
+    position: relative;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1.3333333333rem 1.6rem;
+    background: #5f27cd;
+    border-radius: 0.4rem;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+  
+.task-collapse .heading:before {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 12.6'%3E%3Cpath d='M24.717,11.18A1.352,1.352,0,0,0,23.652,9H8.35A1.352,1.352,0,0,0,7,10.359a1.334,1.334,0,0,0,.286.823c2.165,2.8,5.854,7.558,7.664,9.9a1.345,1.345,0,0,0,2.129,0ZM11.1,11.7h9.8l-4.892,6.34Z' transform='translate(-7 -9)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1.6rem;
+    transition: all 0.3s ease;
+}
+  
+.task-collapse .heading:hover {
+    color: rgba(255, 255, 255, 0.45);
+}
+  
+.task-collapse .heading:hover:before {
+    opacity: 0.45;
+}
+  
+.task-collapse .content {
+    padding: 1.6rem;
+    line-height: 24px;;
+}
+
+.content a {
+    text-decoration: none;
+    color: #000;
+}
+
+.questions-more {
+    margin: 2.4rem auto;
+    text-align: center;
+}
+
+.questions-more a {
+    text-decoration: none;
+    background-color: #33c44d;
+    color: #fff;
+
+    padding: 0.8rem 2rem;
+    border-radius: 0.4rem;
+}
