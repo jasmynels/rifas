@@ -81,10 +81,9 @@
     font-size: 0.8rem;
 }
 
-.card-info span {
+.card-info .link {
     background-color: #33c44d;
     color: #fff;
-
     padding: 0.2rem 1.2rem;
     border-radius: 0.4rem;
     text-transform: lowercase;

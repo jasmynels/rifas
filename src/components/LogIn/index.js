@@ -1,11 +1,14 @@
 import * as yup from "yup";
-import React from 'react'
+import React, { useContext } from 'react'
 import "./style.css"
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Logo from '../../assets/rifa.png'
+import { AuthContext } from "../../providers/context/AuthContext";
 
 export function LogIn() {
+
+  const { onSubmitLogin } = useContext(AuthContext)
 
     const formSchema = yup.object().shape({
         email: yup.string().required("Email ou Telefone obrigatório").email("Email Inválido"),
@@ -23,15 +26,12 @@ export function LogIn() {
         resolver: yupResolver(formSchema),
       });
 
-      const onSubmitFunction = (data) => {
-        console.log(data)
-      };
 
     return (
    
             <section className='login'>
                 <img src={Logo} alt='' />
-                <form onSubmit={handleSubmit(onSubmitFunction)}>
+                <form onSubmit={handleSubmit(onSubmitLogin)}>
                     <label>
                         Telefone ou Email
                         <input type='text' name='login' id='login' className='input' {...register("email")}/>

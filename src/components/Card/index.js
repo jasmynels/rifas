@@ -3,17 +3,15 @@ import { BiChevronRight } from "react-icons/bi";
 import "./style.css";
 
 import { AuthContext } from "../../providers/context/AuthContext";
+import { Link } from "react-router-dom";
 
 export function Card() {
-  const { product } = useContext(AuthContext);
-
-  console.log(product)
-  
+  const { productArr } = useContext(AuthContext);
 
   return (
     <>
-      {/* {
-      product.map((produto) => (
+      {
+      productArr.map((produto) => (
             <div key={produto.id} className="card">
               <div className="card-overlay"></div>
               <img src={produto.imagem} alt="" />
@@ -22,13 +20,13 @@ export function Card() {
                 <div className="card-info">
                   <h2> {produto.titulo} </h2>
                   <p> {produto.subtitulo} </p>
-                  <span> Adquira já </span>
+                  <Link to ="" className="link"> Adquira já </Link>
                 </div>
               </div>
               <BiChevronRight size={28} color="#33c44d" />
             </div>
       ))
-      } */}
+      }
     </>
   )
 }

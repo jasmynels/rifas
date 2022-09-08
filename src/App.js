@@ -16,7 +16,7 @@ import Termos from './pages/Termos'
 
 function App() {
   	return (
-		<BrowserRouter>
+		
 			<Routes>
 				<Route path="/" exact element={<Index />} />
 				<Route path="/contato" element={<Contato />} />
@@ -33,7 +33,7 @@ function App() {
 				<Route path="/carrinho" element={<Carrinho />} />
 
 			</Routes>
-		</BrowserRouter>
+		
   	);
 }
 

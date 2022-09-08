@@ -1,16 +1,17 @@
 import React from 'react'
-import { BiCamera } from 'react-icons/bi'
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import api from '../../services/axios';
-
 
 
 
 import "./style.css"
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/context/AuthContext';
 
 export function Register() {
+
+    const { onSubmitFunction } = useContext(AuthContext)
 
     const formSchema = yup.object().shape({
       name: yup.string().required("Nome obrigatório"),
@@ -35,26 +36,7 @@ export function Register() {
         resolver: yupResolver(formSchema),
       });
 
-      
-
-    //   async function apiCadastro(data){
-    //     const formData = data
-
-    //     return await api
-    //     .post("/register", formData)
-    //     .then((response) => {
-    //         console.log("sucess")
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //       });
-    //   }
-
-    // const onSubmitFunction = (data) => {
-    //      apiCadastro(data)
-    //   };
-      
-    return (
+      return (
         <>
             <div className='register'>
                 <div className='register-header'>
@@ -64,7 +46,7 @@ export function Register() {
                 </div>
                 <div className='register-form'>
                     
-                    <form onSubmit={handleSubmit()}>
+                    <form onSubmit={handleSubmit(onSubmitFunction)}>
                         <br/>
                         <label>
                             Nome completo
