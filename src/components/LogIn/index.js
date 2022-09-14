@@ -11,7 +11,7 @@ export function LogIn() {
   const { onSubmitLogin } = useContext(AuthContext)
 
     const formSchema = yup.object().shape({
-        email: yup.string().required("Email ou Telefone obrigatório").email("Email Inválido"),
+        phone: yup.string().required("Telefone obrigatório"),
         password: yup
           .string()
           .required("Senha obrigatório")
@@ -34,8 +34,8 @@ export function LogIn() {
                 <form onSubmit={handleSubmit(onSubmitLogin)}>
                     <label>
                         Telefone ou Email
-                        <input type='text' name='login' id='login' className='input' {...register("email")}/>
-                        <p>{errors.email?.message}</p>
+                        <input type='text' name='login' id='login' className='input' {...register("phone")}/>
+                        <p>{errors.phone?.message}</p>
                     </label> 
                     <label>
                         Senha
@@ -49,4 +49,4 @@ export function LogIn() {
     );
 }
 
-export default LogIn
+export default LogIn;

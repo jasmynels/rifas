@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
  import { useNavigate } from "react-router-dom";
 import api from "../../services/axios";
 
+
 export const AuthContext = createContext({});
 
 export const AuthProvider = ({children}) => {
@@ -10,10 +11,23 @@ export const AuthProvider = ({children}) => {
     const [product, setProduct] = useState([]);
     const [ productArr, setProductArr ] = useState([]);
     const [ user, setUser ] = useState();
+    const [pedidos , setPedidos ] = useState([]);
+    const token = localStorage.getItem("token");
+
     useEffect(() => {
       api.get("/rifas").then(({ data }) => {
        setProduct(data.data[0]);
        setProductArr(data.data)
+      })
+    }, [])
+
+    useEffect(() => {
+      api.get("/pedidos", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }).then(({ data }) => {
+        setPedidos(data.data);
       })
     }, [])
 
@@ -22,9 +36,8 @@ export const AuthProvider = ({children}) => {
       api.post("/register", formData)
         .then((response) => {
             setUser(response)
-            // setTimeout(() => {
-            //   navigate("../login")
-            // }, 2000)
+            localStorage.setItem("token", response.data.token);      
+            navigate("../login")
         })
         .catch((err) => {
             console.log(err);
@@ -35,7 +48,8 @@ export const AuthProvider = ({children}) => {
       const formData = data;
       api.post("/login", formData)
         .then((response) => {
-              navigate("../login", { replace: true })
+          localStorage.setItem("token", response.data.token);
+          navigate("/")
         })
     }
 
@@ -48,7 +62,7 @@ export const AuthProvider = ({children}) => {
    };
 
   return (
-    <AuthContext.Provider value={{ product, productArr, onSubmitFunction, onSubmitLogin }}>
+    <AuthContext.Provider value={{ product, productArr, onSubmitFunction, onSubmitLogin, pedidos}}>
       {children}
     </AuthContext.Provider>
   );

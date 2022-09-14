@@ -21,12 +21,7 @@ export function Search() {
                         <input className='search-submit' type="submit" value="Buscar" />
                     </form>
                 </div>
-
                 <div className='search-results'>
-                    <a href=''> <CardSearch /> </a>
-                    <a href=''> <CardSearch /> </a>
-                    <a href=''> <CardSearch /> </a>
-                    <a href=''> <CardSearch /> </a>
                     <a href=''> <CardSearch /> </a>
                 </div>
             </section>   

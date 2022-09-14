@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route, Routes } from 'react-router-dom'
+import {Route, Routes } from 'react-router-dom'
 
 import Index from './pages/Index'
 import Contato from './pages/Contato'
@@ -14,9 +14,10 @@ import Login from './pages/Login'
 import Termos from './pages/Termos'
 
 
+
 function App() {
   	return (
-		
+
 			<Routes>
 				<Route path="/" exact element={<Index />} />
 				<Route path="/contato" element={<Contato />} />

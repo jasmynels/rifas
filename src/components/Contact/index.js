@@ -18,25 +18,25 @@ export function Contact() {
                     {/* <form onSubmit={this.handleSubmit}> */}
                     <form>
                         <label>
-                            seu nome
+                            Seu nome
                             <input type="text" className='input' required/>
                         </label>
                         <label>
-                            seu telefone
+                            Seu telefone
                             <input type="tel" className='input' required/>
                         </label>
                         <label>
-                            sorteio
+                            Sorteio
                             <select name="rifa" id="rifa" class="input" required>
                                 <option value="0">Deseja falar sobre um sorteio?</option>
                             </select>
                         </label>
                         <label>
-                            assunto
+                            Assunto
                             <input type="text" className='input' required/>
                         </label>
                         <label>
-                            mensagem
+                            Mensagem
                             <textarea type="text" className='input' required> </textarea>
                         </label>
                         <input className='contact-submit' type="submit" value="Enviar" />
