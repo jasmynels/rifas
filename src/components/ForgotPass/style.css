@@ -17,6 +17,7 @@
     font-family: 'Bebas Neue', sans-serif;
     cursor: pointer;
 }
+
 .login form {
     width: 100%;
 }
@@ -46,3 +47,7 @@
     margin-top: 1rem;
 }
 
+#telefoneBlock { 
+    cursor: not-allowed;
+    color: grey;
+}

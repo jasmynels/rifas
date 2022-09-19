@@ -16,6 +16,15 @@
     gap: 1.2rem;
 }
 
+.link { 
+    text-decoration: none;
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
 
 .register form > label{
     width: 100%; 

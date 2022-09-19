@@ -8,6 +8,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css"
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/context/AuthContext';
+import { Link } from 'react-router-dom';
 
 export function Register() {
 
@@ -82,6 +83,7 @@ export function Register() {
                         </label>
                         <button className='register-submit'>Enviar</button>
                     </form>
+                    <Link className="link" to="/login">Já tem um login? Vá para página de login</Link>
                 </div>
             </div>
        </>

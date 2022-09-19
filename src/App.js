@@ -12,6 +12,8 @@ import Carrinho from './pages/Carrinho'
 import Sorteio from './pages/Sorteio'
 import Login from './pages/Login'
 import Termos from './pages/Termos'
+import ForgotPass from './pages/ForgotPassword'
+import ChangePassword from './pages/ChangePassword'
 
 
 
@@ -26,13 +28,14 @@ function App() {
 				<Route path="/sorteios" element={<Sorteios />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/termos" element={<Termos />} />
-
+				<Route path="/forgot" element={<ForgotPass />}/>
+				<Route path="/changepass" element={<ChangePassword />}/>
 				{/* Rotas com parametros */}
 				<Route path="/busca" element={<Busca />} />
 				<Route path="/compra" element={<Compra />} />
 				<Route path="/sorteio" element={<Sorteio />} />
 				<Route path="/carrinho" element={<Carrinho />} />
-
+				
 			</Routes>
 		
   	);

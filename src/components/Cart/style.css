@@ -63,6 +63,12 @@
     font-weight: bold;
     margin-bottom: 0.4rem;
 }
+.link { 
+    text-decoration: none;
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+}
 
 .cart-user-info span {
     color: #999;
