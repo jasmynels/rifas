@@ -1,33 +1,27 @@
-import React, { useContext} from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { BiChevronRight } from "react-icons/bi";
 import "./style.css";
 
-import { AuthContext } from "../../providers/context/AuthContext";
-import { Link } from "react-router-dom";
+export function Card({ id, titulo, subtitulo, imagem}) {
+  // console.log(props)
 
-export function Card() {
-  const { productArr } = useContext(AuthContext);
+
 
   return (
-    <>
-      {
-      productArr.map((produto) => (
-            <div key={produto.id} className="card">
-              <div className="card-overlay"></div>
-              <img src={produto.imagem} alt="" />
-              <div className="card-item">
-                <img src={produto.imagem} alt="" />
-                <div className="card-info">
-                  <h2> {produto.titulo} </h2>
-                  <p> {produto.subtitulo} </p>
-                  <Link to ="" className="link"> Adquira já </Link>
-                </div>
-              </div>
-              <BiChevronRight size={28} color="#33c44d" />
-            </div>
-      ))
-      }
-    </>
+    <div className="card">
+      <div className="card-overlay"></div>
+      <img src={imagem} alt="" />
+      <div className="card-item">
+        <img src={imagem} alt="" />
+        <div className="card-info">
+          <h2> {titulo} </h2>
+          <p> {subtitulo} </p>
+          <span className="link"> Adquira já </span>
+        </div>
+      </div>
+      <BiChevronRight size={28} color="#33c44d" />
+    </div>
   )
 }
 
