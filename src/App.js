@@ -16,22 +16,27 @@ import Termos from './pages/Termos'
 
 
 function App() {
+
   	return (
 
 			<Routes>
 				<Route path="/" exact element={<Index />} />
-				<Route path="/contato" element={<Contato />} />
-				<Route path="/ganhadores" element={<Ganhadores />} />
-				<Route path="/cadastro" element={<Cadastro />} />
-				<Route path="/sorteios" element={<Sorteios />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/termos" element={<Termos />} />
+				<Route path="/contato" exact element={<Contato />} />
+				<Route path="/ganhadores" exact element={<Ganhadores />} />
+				<Route path="/cadastro" exact element={<Cadastro />} />
+				<Route path="/sorteios" exact element={<Sorteios />} />
+				<Route path="/login" exact element={<Login />} />
+				<Route path="/termos" exact element={<Termos />} />
 
 				{/* Rotas com parametros */}
-				<Route path="/busca" element={<Busca />} />
-				<Route path="/compra" element={<Compra />} />
-				<Route path="/sorteio" element={<Sorteio />} />
-				<Route path="/carrinho" element={<Carrinho />} />
+				<Route path="/busca" exact element={<Busca />} />
+				<Route path="/compra" exact element={<Compra />} />
+
+				<Route path="/sorteio/:slug/:id" exact element={
+					<Sorteio />} 
+				/>
+
+				<Route path="/carrinho" exact element={<Carrinho />} />
 
 			</Routes>
 		
