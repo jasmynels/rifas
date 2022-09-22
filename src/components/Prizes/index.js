@@ -11,34 +11,6 @@ import './style.css'
 export function Prizes() {
     const {product, productArr} = useContext(AuthContext)
 
-    // const data = [
-    //     {
-    //         id: '2',
-    //         titulo: '1234',
-    //         subtitulo: 'O senhor dos aneis',
-    //         imagem: 'https://rifasbrasil.s3.amazonaws.com/rifas/1662082478_eeb84de76084f4ef08f5e184909eb55c.jpg'
-    //     }, 
-    //     {
-    //         id: '3',
-    //         titulo: '1asduqhwe',
-    //         subtitulo: 'o iluminado',
-    //         imagem: 'https://rifasbrasil.s3.amazonaws.com/rifas/1662082478_eeb84de76084f4ef08f5e184909eb55c.jpg'
-    //     },
-    //     {
-    //         id: '4',
-    //         titulo: 'qoeaopdadainealedaniela',
-    //         subtitulo: 'lorem ipsum',
-    //         imagem: 'https://rifasbrasil.s3.amazonaws.com/rifas/1662082478_eeb84de76084f4ef08f5e184909eb55c.jpg'
-    //     },
-    //     {
-    //         id: '5',
-    //         titulo: 'qeowieqoowie',
-    //         subtitulo: 'dolor sit amet',
-    //         imagem: 'https://rifasbrasil.s3.amazonaws.com/rifas/1662082478_eeb84de76084f4ef08f5e184909eb55c.jpg'
-    //     }
-
-    // ]
-
     return(
         <>
             <section className='prize'>
