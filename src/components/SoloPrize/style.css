@@ -92,7 +92,7 @@
 .solo-prize-search button {
     border: none;
     width: 100%;
-    max-width: 320px;
+    /* max-width: 320px; */
 
     padding: 0.8rem;
     border-radius: 0.8rem;
@@ -113,7 +113,27 @@
 
 .solo-prize-numbers p {
     text-align: center;
+    margin-bottom: 1rem;
 }
+
+.solo-prize-numbers strong {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+
+    text-align: center;
+    padding: 0.2rem 0.8rem;
+    background-color: rgba(51, 196, 77, 0.4);
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.solo-prize-numbers strong span {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 
 .buy {
     display: flex;
@@ -183,7 +203,8 @@
     margin-top: 1.6rem;
 }
 
-.buy-total a {
+.buy-total button {
+    border: none;
     display: block;
     width: 100%;
     background-color: #33C44D;

@@ -1,4 +1,7 @@
 import React from 'react'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../../providers/context/AuthContext'
 import Card from '../Card'
 import CardPurchase from '../Purchase/components/CardPurchase'
 
@@ -6,6 +9,8 @@ import './style.css'
 
 
 export function Bounties() {
+    const {productArr} = useContext(AuthContext)
+
     return(
         <>
             <section className='bounties'>
@@ -14,10 +19,11 @@ export function Bounties() {
                     <p> Ainda dá tempo de participar, compre sua cota agora! </p>
                 </div>
                 <div className='bounties-cards'>
-                    <a href='/carrinho'> <Card /> </a>
-                    <a href='/carrinho'> <Card /> </a>
-                    <a href='/carrinho'> <Card /> </a>
-                    <a href='/carrinho'> <Card /> </a>
+                    { productArr.slice(0,4).map((rifa) => (
+                        <Link to={`/sorteio/${rifa.titulo}/${rifa.id}`} key={rifa.id}> 
+                            <Card {...rifa} /> 
+                        </Link>
+                    ))}
                 </div>
 
                 <div className='bounties-separator'></div>
@@ -27,10 +33,11 @@ export function Bounties() {
                     <p> Veja prêmios que já foram sorteados e os ganhadores. </p>
                 </div>
                 <div className='bounties-cards'>
-                    <a href='/compra'> <CardPurchase /> </a>
-                    <a href='/compra'> <CardPurchase /> </a>
-                    <a href='/compra'> <CardPurchase /> </a>
-                    <a href='/compra'> <CardPurchase /> </a>
+                    { productArr.slice(0,4).map((rifa) => (
+                        <Link to={`/sorteio/${rifa.titulo}/${rifa.id}`} key={rifa.id}> 
+                            <Card {...rifa} /> 
+                        </Link>
+                    ))}
                 </div>
             </section>
         </>
