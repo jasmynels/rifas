@@ -4,9 +4,13 @@ import Pix from './components/Pix'
 import CardPurchase from './components/CardPurchase'
 
 import './style.css'
+import { useContext } from 'react'
+import { AuthContext } from '../../providers/context/AuthContext'
 
 
 export function Prizes() {
+
+    const { rifaValue, qtd, productArr, usuario } = useContext(AuthContext);
     return(
         <>
             <section className='purchase'>
@@ -37,9 +41,9 @@ export function Prizes() {
                     <h2> <BiInfoCircle size={20} /> Informações da sua compra </h2>
 
                     <div className='purchase-details-user'>
-                        <p> <strong> Comprador: </strong> <span> Nome Fulano </span> </p>
-                        <p> <strong> CPF: </strong> <span> 123.***.***-12 </span> </p>
-                        <p> <strong> Telefone: </strong> <span> (99)*****-9999 </span> </p>
+                        <p> <strong> Comprador: </strong> <span> {usuario.name} </span> </p>
+                        <p> <strong> CPF: </strong> <span> {usuario.cpf} </span> </p>
+                        <p> <strong> Telefone: </strong> <span> {usuario.phone} </span> </p>
                         <p> <strong> Data: </strong> <span> 22/10/2022 </span> </p>
                         <p> <strong> Status: </strong> <span> Compra aprovada </span> </p>
                         <p> <strong> Total: </strong> <span> R$ 2.40 </span> </p>

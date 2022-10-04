@@ -10,15 +10,31 @@ export const AuthProvider = ({ children }) => {
   const [product, setProduct] = useState([]);
   const [productArr, setProductArr] = useState([]);
   const [user, setUser] = useState();
+  const [usuario, setUsuario] = useState({});
   const [pedidos, setPedidos] = useState([]);
   const token = localStorage.getItem("token");
-
+  const [rifaValue, setRifaValue] = useState(0)
+  // quantidade comprada
+  const [qtd, setQtd] = useState(0)
   useEffect(() => {
     api.get("/rifas").then(({ data }) => {
       setProduct(data.data[0]);
       setProductArr(data.data);
     });
   }, []);
+  useEffect(() => {
+    api
+    .get("/me", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then(({ data }) => {
+      setUsuario(data.user);
+      console.log(data.user);
+    });
+  }, [])
+  
 
   useEffect(() => {
     api
@@ -29,8 +45,23 @@ export const AuthProvider = ({ children }) => {
       })
       .then(({ data }) => {
         setPedidos(data.data);
+        console.log(data)
       });
   }, []);
+
+  // useEffect(() => {
+    
+  //   api
+  //     .post("/pedidos/create", {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     })
+  //     .then(({ data }) => {
+  //       console.log(data.data);
+        
+  //     });
+  // }, []);
 
   function apiCadastro(data) {
     const formData = data;
@@ -80,6 +111,8 @@ export const AuthProvider = ({ children }) => {
         apiLogin,
         pedidos,
         token,
+        usuario,
+        rifaValue, setRifaValue, qtd, setQtd
       }}
     >
       {children}
